@@ -1,0 +1,27 @@
+<div ng-controller="OperationDetailsCtrl">
+<h3>Operation</h3>
+<b>URL</b>: {{operation.path}}
+<br/>
+<b>Verb</b>: {{operation.verb}}
+<br/>
+<b>Class</b>: {{operation.className}} <a href="{{gitUrl}}">[git]</a>
+<br/>
+<b>Method</b>: {{operation.methodName}}
+    <br/>
+    <b>Parameters (in)</b>:
+    <ul>
+        <!--li ng-repeat="t in operation.params | orderBy : 'className'">{{t.className}}</li-->
+        <type-tree ng-repeat="t in operation.params | orderBy : 'className'" type="t"/>
+    </ul>
+<br/>
+<b>Return Type (out)</b>:<!-- {{operation.returnType}}-->
+    <!--
+    <ul>
+        <li>{{operation.returnType.className}}</li>
+    </ul>-->
+
+    <ul>
+        <!--type-tree type="operation.returnType"/-->
+        <type-tree ng-repeat="t in operation.returnTypeList | orderBy : 'className'" type="t"/>
+    </ul>
+</div>

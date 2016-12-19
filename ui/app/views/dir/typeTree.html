@@ -1,0 +1,5 @@
+<li>{{type.className}}</li>
+<ul>
+    <!--li ng-repeat="t in type.genericTypes | orderBy : 'className'">{{t.className}}</li-->
+    <type-tree ng-repeat="t in type.genericTypes | orderBy : 'className'" type="t"/>
+</ul>

@@ -1,0 +1,20 @@
+<div ng-controller="ClassListCtrl">
+    <div id="filter">
+        Filter:<br/>
+        <input type="checkbox" ng-model="filterm.typeParameter">Parameter (in)<br/>
+        <input type="checkbox" ng-model="filterm.typeReturn">Return type (out)<br/>
+        <input type="checkbox" ng-model="filterm.typeOther">Other<br/>
+        <div id="classOrigin">
+            Origin:<br/>
+            <input type="checkbox" ng-model="filterm.originJdk" checked="true">JDK<br/>
+            <input type="checkbox" ng-model="filterm.originProjectSpecific">Project specific<br/>
+            <input type="checkbox" ng-model="filterm.originThirdParty">Third party<br/>
+        </div>
+    </div>
+
+    <ul>
+        <li ng-repeat="t in types | orderBy : 'name' | classfilter:filterm"><a href="#/class/{{t.name}}">{{t.name}}</a> P:{{t.inputting.length}} R:{{t.returning.length}}</li>
+    </ul>
+    <br/>
+    Count: {{types.length}}
+</div>

@@ -1,0 +1,5 @@
+<div ng-controller="OperationListCtrl">
+    <ul>
+        <li ng-repeat="operation in operations | orderBy : 'path'"><a href="#/operation/-{{operation.path}}/{{operation.verb}}">{{operation.path}} {{operation.verb}}</a></li>
+    </ul>
+</div>

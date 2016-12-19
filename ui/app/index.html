@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="mainModule">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title ng-bind="header"></title>
+<script src="../../_angular/angular.js"></script>
+<script src="../../_angular/angular-ui-router.js"></script>
+</head>
+<body>
+
+<a href="#/">Operations by URL</a></a> <a href="#/meth">Operations by method</a> <a href="#/classes">Classes</a><br/>
+
+<br/>
+<div ui-view></div>
+
+<script src="../data/config.js"></script>
+<script src="../data/operations.js"></script>
+<script src="../data/patch.js"></script>
+<script src="js/app.js"></script>
+<script src="js/routes.js"></script>
+<script src="controllers/OperationListCtrl.js"></script>
+<script src="controllers/OperationDetailsCtrl.js"></script>
+<script src="controllers/ClassListCtrl.js"></script>
+<script src="controllers/ClassDetailsCtrl.js"></script>
+<script src="filters/classfilter.js"></script>
+<script src="directives/typeTree.js"></script>
+
+</body>
+</html>
