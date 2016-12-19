@@ -1,40 +1,38 @@
 [ {
-  "className" : "com.rabarbers.restdoc.mockproj.GenericResource",
-  "methodName" : "getPairTree",
+  "className" : "com.rabarbers.restdoc.mockproj.UserResource",
+  "methodName" : "getCatalogId",
   "returnType" : {
-    "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
-    "genericTypes" : [ {
-      "className" : "java.lang.String",
-      "genericTypes" : [ ]
-    }, {
-      "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
-      "genericTypes" : [ {
-        "className" : "java.lang.Long",
-        "genericTypes" : [ ]
-      }, {
-        "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
-        "genericTypes" : [ ]
-      } ]
-    } ]
+    "className" : "java.lang.Long",
+    "genericTypes" : [ ]
   },
-  "params" : [ ],
-  "path" : "/generics/tree",
+  "params" : [ {
+    "className" : "java.lang.String",
+    "genericTypes" : [ ]
+  } ],
+  "path" : "/users/{globalId: \\d*}",
   "verb" : "GET"
 }, {
-  "className" : "com.rabarbers.restdoc.mockproj.GenericResource",
-  "methodName" : "getPairList",
+  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
+  "methodName" : "getOrderList",
   "returnType" : {
-    "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
+    "className" : "java.util.List",
     "genericTypes" : [ {
-      "className" : "java.lang.String",
-      "genericTypes" : [ ]
-    }, {
-      "className" : "java.lang.Integer",
+      "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
       "genericTypes" : [ ]
     } ]
   },
   "params" : [ ],
-  "path" : "/generics/list",
+  "path" : "/catalogs/orders",
+  "verb" : "GET"
+}, {
+  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
+  "methodName" : "getCatalogId",
+  "returnType" : {
+    "className" : "java.lang.Long",
+    "genericTypes" : [ ]
+  },
+  "params" : [ ],
+  "path" : "/catalogs/id",
   "verb" : "GET"
 }, {
   "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
@@ -52,29 +50,6 @@
   } ],
   "path" : "/catalogs/id",
   "verb" : "PUT"
-}, {
-  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
-  "methodName" : "getCatalogId",
-  "returnType" : {
-    "className" : "java.lang.Long",
-    "genericTypes" : [ ]
-  },
-  "params" : [ ],
-  "path" : "/catalogs/id",
-  "verb" : "GET"
-}, {
-  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
-  "methodName" : "getOrderList",
-  "returnType" : {
-    "className" : "java.util.List",
-    "genericTypes" : [ {
-      "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
-      "genericTypes" : [ ]
-    } ]
-  },
-  "params" : [ ],
-  "path" : "/catalogs/orders",
-  "verb" : "GET"
 }, {
   "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
   "methodName" : "getCatalogs",
@@ -106,4 +81,42 @@
   } ],
   "path" : "/catalogs/list",
   "verb" : "POST"
+}, {
+  "className" : "com.rabarbers.restdoc.mockproj.GenericResource",
+  "methodName" : "getPairList",
+  "returnType" : {
+    "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
+    "genericTypes" : [ {
+      "className" : "java.lang.String",
+      "genericTypes" : [ ]
+    }, {
+      "className" : "java.lang.Integer",
+      "genericTypes" : [ ]
+    } ]
+  },
+  "params" : [ ],
+  "path" : "/generics/list",
+  "verb" : "GET"
+}, {
+  "className" : "com.rabarbers.restdoc.mockproj.GenericResource",
+  "methodName" : "getPairTree",
+  "returnType" : {
+    "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
+    "genericTypes" : [ {
+      "className" : "java.lang.String",
+      "genericTypes" : [ ]
+    }, {
+      "className" : "com.rabarbers.restdoc.mockproj.domain.Pair",
+      "genericTypes" : [ {
+        "className" : "java.lang.Long",
+        "genericTypes" : [ ]
+      }, {
+        "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
+        "genericTypes" : [ ]
+      } ]
+    } ]
+  },
+  "params" : [ ],
+  "path" : "/generics/tree",
+  "verb" : "GET"
 } ]
