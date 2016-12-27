@@ -1,15 +1,15 @@
 <div ng-controller="ClassDetailsCtrl">
 <h3>Class</h3>
-Class Name: {{name}} <a href="{{gitUrl}}">[git]</a>
+Class Name: {{name}} <a href="{{gitUrl}}">[source]</a>
 <br/>
     <div ng-if="class.param == true">
-        <b>Parameters (in)</b>:
+        <b>As Parameter (in)</b>:
         <ul>
             <li ng-repeat="x in inputting | orderBy : 'path'"><a href="#/operation/-{{x.path}}/{{x.verb}}">{{x.path}} {{x.verb}}</a></li>
         </ul>
     </div>
 <div ng-if="class.returnType == true">
-    <b>Return Type (out)</b>:
+    <b>As Return Type (out)</b>:
     <ul>
         <li ng-repeat="x in returning | orderBy : 'path'"><a href="#/operation/-{{x.path}}/{{x.verb}}">{{x.path}} {{x.verb}}</a></li>
     </ul>
