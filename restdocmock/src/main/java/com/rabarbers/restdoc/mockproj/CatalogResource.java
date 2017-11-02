@@ -58,4 +58,11 @@ public class CatalogResource {
 
     }
 
+    @GET
+    @Path("/something/{id: \\d*}")
+    public List<Order> getSomething() {
+
+        return null;
+    }
+
 }

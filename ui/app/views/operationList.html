@@ -2,4 +2,8 @@
     <ul>
         <li ng-repeat="operation in operations | orderBy : 'path'"><a href="#/operation/-{{operation.path}}/{{operation.verb}}">{{operation.path}} {{operation.verb}}</a></li>
     </ul>
+
+    <textarea id="x" rows="10" cols="50" ng-model="ang">{{ang}}</textarea>
+    <p ng-repeat="(property, value) in ang">{{property}} : {{value}}</p>
+    MODULE: {{ang.module}}
 </div>

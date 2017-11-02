@@ -152,13 +152,24 @@ public class App {
     }
     
     private static String getCombinedPath(String httpPathClass, String httpPathMethod) {
+        String result;
+        
         if (!httpPathClass.endsWith("/") && !httpPathMethod.startsWith("/")) {
-            return httpPathClass + "/" + httpPathMethod;
+            result = httpPathClass + "/" + httpPathMethod;
 //        } else if { //TODO
 //            
         } else {
-            return httpPathClass + httpPathMethod;
+            result = httpPathClass + httpPathMethod;
         }
+        
+        //if (result.lastIndexOf("\\") > -1) {
+            //result = result.replace("\\\\", "\\");
+            //result = result.replaceAll("\\\\\\\\", "\\");
+            result = result.replaceAll("\\\\+", "\\");
+            
+        //}
+        
+        return result;
     }
 
     private static Set<Class<? extends Object>> retrieveClasses(String pack, ClassLoader additionalClassLoader) {

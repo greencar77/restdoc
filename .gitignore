@@ -2,6 +2,7 @@
 .project
 .settings
 .idea
+*.iml
 target/
 todo.txt
 ui/run.bat

@@ -1,5 +1,49 @@
 var ops =
     [ {
+      "className" : "com.rabarbers.restdoc.mockproj.UserResource",
+      "methodName" : "getCatalogId",
+      "returnType" : {
+        "className" : "java.lang.Long",
+        "genericTypes" : [ ]
+      },
+      "params" : [ {
+        "className" : "java.lang.String",
+        "genericTypes" : [ ]
+      } ],
+      "path" : "/users/{globalId: \\d*}",
+      "verb" : "GET"
+    }, {
+      "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
+      "methodName" : "getCatalogs",
+      "returnType" : {
+        "className" : "javax.ws.rs.core.Response",
+        "genericTypes" : [ ]
+      },
+      "params" : [ {
+        "className" : "java.lang.Float",
+        "genericTypes" : [ ]
+      }, {
+        "className" : "java.util.Map",
+        "genericTypes" : [ {
+          "className" : "java.lang.String",
+          "genericTypes" : [ ]
+        }, {
+          "className" : "java.util.Collection",
+          "genericTypes" : [ {
+            "className" : "java.lang.String",
+            "genericTypes" : [ ]
+          } ]
+        } ]
+      }, {
+        "className" : "java.lang.Float",
+        "genericTypes" : [ ]
+      }, {
+        "className" : "java.lang.String",
+        "genericTypes" : [ ]
+      } ],
+      "path" : "/catalogs/list",
+      "verb" : "POST"
+    }, {
       "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
       "methodName" : "getCatalogId",
       "returnType" : {
@@ -40,35 +84,17 @@ var ops =
       "verb" : "PUT"
     }, {
       "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
-      "methodName" : "getCatalogs",
+      "methodName" : "getSomething",
       "returnType" : {
-        "className" : "javax.ws.rs.core.Response",
-        "genericTypes" : [ ]
-      },
-      "params" : [ {
-        "className" : "java.lang.Float",
-        "genericTypes" : [ ]
-      }, {
-        "className" : "java.util.Map",
+        "className" : "java.util.List",
         "genericTypes" : [ {
-          "className" : "java.lang.String",
+          "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
           "genericTypes" : [ ]
-        }, {
-          "className" : "java.util.Collection",
-          "genericTypes" : [ {
-            "className" : "java.lang.String",
-            "genericTypes" : [ ]
-          } ]
         } ]
-      }, {
-        "className" : "java.lang.Float",
-        "genericTypes" : [ ]
-      }, {
-        "className" : "java.lang.String",
-        "genericTypes" : [ ]
-      } ],
-      "path" : "/catalogs/list",
-      "verb" : "POST"
+      },
+      "params" : [ ],
+      "path" : "/catalogs/something/{id: \\d*}",
+      "verb" : "GET"
     }, {
       "className" : "com.rabarbers.restdoc.mockproj.GenericResource",
       "methodName" : "getPairList",

@@ -13,6 +13,16 @@
   "verb" : "GET"
 }, {
   "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
+  "methodName" : "getCatalogId",
+  "returnType" : {
+    "className" : "java.lang.Long",
+    "genericTypes" : [ ]
+  },
+  "params" : [ ],
+  "path" : "/catalogs/id",
+  "verb" : "GET"
+}, {
+  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
   "methodName" : "getOrderList",
   "returnType" : {
     "className" : "java.util.List",
@@ -23,16 +33,6 @@
   },
   "params" : [ ],
   "path" : "/catalogs/orders",
-  "verb" : "GET"
-}, {
-  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
-  "methodName" : "getCatalogId",
-  "returnType" : {
-    "className" : "java.lang.Long",
-    "genericTypes" : [ ]
-  },
-  "params" : [ ],
-  "path" : "/catalogs/id",
   "verb" : "GET"
 }, {
   "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
@@ -50,6 +50,19 @@
   } ],
   "path" : "/catalogs/id",
   "verb" : "PUT"
+}, {
+  "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
+  "methodName" : "getSomething",
+  "returnType" : {
+    "className" : "java.util.List",
+    "genericTypes" : [ {
+      "className" : "com.rabarbers.restdoc.mockproj.domain.Order",
+      "genericTypes" : [ ]
+    } ]
+  },
+  "params" : [ ],
+  "path" : "/catalogs/something/{id: \\d*}",
+  "verb" : "GET"
 }, {
   "className" : "com.rabarbers.restdoc.mockproj.CatalogResource",
   "methodName" : "getCatalogs",
